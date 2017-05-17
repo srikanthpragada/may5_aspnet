@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Currency Conversion</title>
+    <style>
+        body {background-color : beige;  font-family: verdana; font-size : 12pt}
+        h1 { color: red; font-family:Arial; font-size: 30pt }
+    </style>
+    <script>
+        function convert() 
+        {
+            var rate, result, amount;
+
+            amount = document.getElementById("amount").value;
+            rate = document.getElementById("currency").value;
+
+            result = amount / rate; 
+
+            output = document.getElementById("result");
+            output.innerHTML = Math.trunc(result);
+
+        }
+    </script>
+</head>
+<body>
+<h1>Currency Conversion</h1>
+This converts INR to select currency using current rate.
+<p></p>
+Amount in INR 
+<br/>
+<input type="text" id="amount" />
+<p></p>
+Select Currency  
+    <br />
+    <select id="currency">
+        <option value="66">USD</option>
+        <option value="68">Euro</option>
+        <option value="50">Singapore Dollar</option>
+    </select>
+<p><p/>
+<button onclick="convert()">Convert </button>
+<h2 id="result"></h2>
+
+
+
+</body>
+</html>
