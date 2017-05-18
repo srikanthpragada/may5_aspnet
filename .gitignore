@@ -1,5 +1,9 @@
 /bin/*
 /obj/*
+/photos/*
+
+*.jpg
+*.png
 
 # Package Files #
 *.exe
