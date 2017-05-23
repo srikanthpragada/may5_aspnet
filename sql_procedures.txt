@@ -1,0 +1,20 @@
+CREATE PROCEDURE [dbo].[ChangePrice]
+	(@prodid int, @price  money)
+AS
+declare @oldprice money
+declare @diff money
+
+  select @oldprice = price from products where prodid = @prodid;
+
+  select @diff =  abs(@price - @oldprice);
+
+  if @diff  > @oldprice * 0.30 
+     raiserror('Invalid new price. Difference between old and new price is more than 30 percent',16,1)
+  else
+     update products set price = @price where prodid = @prodid;
+     
+     
+call
+======
+
+execute changeprice 101,1010     
