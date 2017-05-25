@@ -10,7 +10,7 @@ public partial class AddSale : System.Web.UI.Page
 
     protected void btnAdd_Click(object sender, EventArgs e)
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=msdb;Integrated Security=True");
+        SqlConnection con = new SqlConnection(Database.ConnectionString);
         try
         {
             con.Open();
