@@ -20,13 +20,18 @@
            DataSourceID="SqlDataSource1">
           <Columns>
               <asp:BoundField DataField="prodid" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="prodid" />
-              <asp:BoundField DataField="prodname" HeaderText="Name" SortExpression="prodname" />
+              <asp:HyperLinkField DataNavigateUrlFields="prodid" DataNavigateUrlFormatString="product_details.aspx?prodid={0}" DataTextField="prodname" HeaderText="Name" />
               <asp:BoundField DataField="price" DataFormatString="{0:c}" HeaderText="Price" SortExpression="price" >
               <ItemStyle HorizontalAlign="Right" />
               </asp:BoundField>
               <asp:BoundField DataField="qoh" HeaderText="Quantity" SortExpression="qoh" >
               <ItemStyle HorizontalAlign="Right" />
               </asp:BoundField>
+              <asp:HyperLinkField 
+                  DataNavigateUrlFields="prodid" 
+                  DataNavigateUrlFormatString="product_sales.aspx?prodid={0}" Text="Sales">
+              <ItemStyle HorizontalAlign="Center" />
+              </asp:HyperLinkField>
           </Columns>
           
       </asp:GridView>
