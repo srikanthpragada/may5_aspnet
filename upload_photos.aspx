@@ -1,6 +1,4 @@
-﻿<%@ Page Language="C#" %>
-
-<!DOCTYPE html>
+﻿<%@ Page Language="C#"  MasterPageFile="~/MasterPage.master" %>
 
 <script runat="server">
 
@@ -22,13 +20,7 @@
 
     }
 </script>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-  <title></title>
-</head>
-<body>
-  <form id="form1" runat="server">
+<asp:Content ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   Person Name  <br />
       <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
       <p />
@@ -39,6 +31,4 @@
       <asp:Button ID="btnUpload" runat="server" Text="Upload" OnClick="btnUpload_Click" />
       <p />
       <asp:Label ID="lblMsg" runat="server" Text=""  EnableViewState="false"></asp:Label>
-  </form>
-</body>
-</html>
+</asp:Content>

@@ -1,0 +1,18 @@
+﻿body {
+}
+
+.header {
+    color:white;
+    background-color:red;
+    font-family:Arial;
+    font-size:30pt;
+    font-weight: bold;
+
+}
+
+.menu {
+    background-color: lightgray;
+    font-family: Verdana;
+    font-size: 12pt;
+    font-weight: bold;
+}
